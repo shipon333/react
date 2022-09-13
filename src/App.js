@@ -1,15 +1,19 @@
-import Card from './components/Card';
+import Products from './components/Products';
 import Data from './data.json';
-const toDoapp = "To Do App";
 function App(){
     return(
         <div>
-        <h1 className='heading'>{toDoapp}</h1>
+            {
+                Data.map((item,index)=> <Products key={index} data={item}/>)
+            }
+        
+            
+        {/* <h1 className='heading'>{toDoapp}</h1>
         {
             Data.map((item, index) =>
                 <Card key={index} title={item.title} desc={item.desc}/>
             )
-        }
+        } */}
         
     </div>
     )
